@@ -1,0 +1,20 @@
+
+stages:
+  - build                 # jobs: build (branches e tags)
+  - test                  # jobs: unit_test (branches e tags)
+  - inspection            # jobs: docker_best_practice (branches), quality_check (branches), quality (tags), security_check (branches), security (tags)
+  - package               # jobs: package (branches e tags)
+  - publish               # jobs: publish (tags)
+  - deploy_dev            # jobs: deploy_dev_ecs (master)
+  - deploy_hom            # jobs: deploy_hom_ecs (tags)
+  - governance            # jobs: create_jira_ticket (tags)
+  - deploy_prd            # jobs: deploy_prd_ecs (tags)
+  
+
+deploy_dev_ecs:
+  only:
+    - develop
+
+security_check:
+  only:
+    - develop
