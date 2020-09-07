@@ -9,6 +9,7 @@
 
 #Ignore Project
 .project
+
 # Log file
 *.log
 
