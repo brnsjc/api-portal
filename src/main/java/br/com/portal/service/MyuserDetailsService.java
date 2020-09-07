@@ -17,6 +17,12 @@ public class MyuserDetailsService implements UserDetailsService{
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
+		ArrayList<String> usuarios = new ArrayList<>();
+		usuarios.add("a");
+		usuarios.add("b");
+		usuarios.add("c");
+		User user ;
+
 		return new User("foo","foo", new ArrayList<>());
 	}
 	
