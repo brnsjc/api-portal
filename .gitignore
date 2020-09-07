@@ -4,6 +4,11 @@
 #Settings Folder
 .settings/
 
+#Ignore ClassPath
+.classpath
+
+#Ignore Project
+.project
 # Log file
 *.log
 
